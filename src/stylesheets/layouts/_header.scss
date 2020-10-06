@@ -1,0 +1,32 @@
+.App-header {
+  @include uniform-sides-padded-container(2em);
+  @extend .flex;
+  align-items: center;
+  background: var(--trans-dark-3);
+  color: #fff;
+  text-transform: uppercase;
+  h1 {
+    display: inherit;
+    align-items: center;
+    font-weight: 300;
+    svg {
+      padding-right: 0.25em;
+    }
+    span.orange {
+      color: var(--orange);
+      font-weight: 800;
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) {
+  .App-header {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 568px) {
+  .App-header {
+    justify-content: left;
+  }
+}

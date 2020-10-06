@@ -1,0 +1,90 @@
+.fullwidth {
+  width: 100% !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-centered {
+  @extend .flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inline-flex-centered {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-lg {
+  font-size: calc(2rem + 2vw);
+}
+.text-md {
+  font-size: 1.5rem;
+}
+
+.text-sm {
+  font-size: 1rem;
+}
+
+.text-xs {
+  font-size: 0.75rem !important;
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.text-warning {
+  color: var(--pomegranate);
+}
+
+.input-error {
+  border: 1px solid var(--pomegranate);
+  color: var(--pomegranate);
+}
+
+.dark-contrast-1 {
+  background: var(--trans-dark-1);
+}
+
+.dark-contrast-2 {
+  background: var(--trans-dark-2);
+}
+
+.dark-contrast-3 {
+  background: var(--trans-dark-3);
+}
+
+.light-contrast-1 {
+  background: var(--trans-light-1);
+}
+
+.light-contrast-2 {
+  background: var(--trans-light-2);
+}
+
+.light-contrast-3 {
+  background: var(--trans-light-3);
+}
+
+.dark-contrast-text {
+  color: var(--trans-dark-3);
+}
+
+.light-contrast-text {
+  color: var(--trans-light-3);
+}
+
+.date-details {
+  @extend .text-sm;
+  font-style: italic;
+}
+
+.empty-notif {
+  text-align: center;
+  font-style: italic;
+  color: var(--trans-dark-4);
+}

@@ -1,0 +1,6 @@
+.App-footer {
+  @include two-sides-padded-container(1em, 2em);
+  @extend .flex-centered;
+  @include border-top(1px, solid, var(--trans-dark-3));
+  color: var(--trans-light-6);
+}

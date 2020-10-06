@@ -1,0 +1,9 @@
+.App {
+  height: 100%;
+  @include grid-container(0);
+  grid-template-rows: auto 1fr auto;
+  .main {
+    @include grid-container(2em);
+    @include uniform-sides-padded-container(2em);
+  }
+}

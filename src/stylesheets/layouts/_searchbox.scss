@@ -1,0 +1,32 @@
+.searchbox-container {
+  //@include two-sides-padded-container(1.5em, 2em);
+  //background: var(--wet-asphalt);
+  .searchbox {
+    @include grid-container(1em);
+    @include bordered-container(1px, solid, var(--trans-dark-3));
+    grid-template-columns: 1fr auto;
+    border-radius: 2em;
+    background: var(--trans-light-9);
+    input {
+      @include uniform-sides-padded-container(0.25em);
+      border: none;
+      background: transparent;
+      margin: 0;
+      text-indent: 1em;
+      text-transform: capitalize;
+      outline: transparent;
+    }
+    button {
+      border: none;
+      background: var(--peter-river);
+      width: 2em;
+      height: 2em;
+      @extend .flex-centered;
+      @include uniform-sides-padded-container(0.25em);
+      @include border-radius(50%);
+      color: #fff;
+      outline: inherit;
+      cursor: pointer;
+    }
+  }
+}
