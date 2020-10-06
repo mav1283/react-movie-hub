@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useData } from "../context/AppContext";
+import { MdWarning } from "react-icons/md";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function DataList() {
@@ -29,6 +30,10 @@ function DataList() {
   useEffect(() => {
     console.log(movies);
   }, [movies]);
+
+  useEffect(() => {
+    console.log(API_KEY);
+  }, []);
 
   return (
     <div className="movies">
@@ -65,7 +70,10 @@ function DataList() {
             })}
         </ul>
       ) : (
-        <p>No data...</p>
+        <p className="notification">
+          <MdWarning />
+          No data...
+        </p>
       )}
     </div>
   );

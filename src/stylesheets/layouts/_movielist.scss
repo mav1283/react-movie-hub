@@ -1,5 +1,14 @@
 .movies {
-  //@include uniform-sides-padded-container(2em);
+  .notification {
+    @extend .flex-centered;
+    color: var(--trans-light-6);
+    font-size: 1.25rem;
+    svg {
+      color: var(--orange);
+      padding-right: 0.5em;
+      font-size: 2rem;
+    }
+  }
   .movielist {
     @include grid-container(1.5em);
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
