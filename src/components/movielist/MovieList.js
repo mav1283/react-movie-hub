@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useData } from "../context/AppContext";
 import { MdWarning } from "react-icons/md";
-const API_KEY = process.env.REACT_APP_API_KEY;
+//const API_KEY = process.env.REACT_APP_API_KEY;
 
 function DataList() {
   const { movies } = useData();
@@ -12,7 +12,7 @@ function DataList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = `https://api.themoviedb.org/3/search/movie/?api_key=${API_KEY}&language=en-US&query=all`;
+        const url = `https://api.themoviedb.org/3/search/movie/?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=all`;
         const response = await fetch(url);
         const data = await response.json();
         setMovieList(data.results);
@@ -32,7 +32,7 @@ function DataList() {
   }, [movies]);
 
   useEffect(() => {
-    console.log(API_KEY);
+    console.log(process.env.REACT_APP_API_KEY);
   }, []);
 
   return (
